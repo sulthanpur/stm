@@ -1,0 +1,291 @@
+ ########################################################Program 1: 
+
+AIM: Recording in context sensitive mode and analog mode using Selenium IDE
+
+
+Objective:
+ Student should be able to
+ Describes Context Sensitive mode
+ Record a test script
+ Read the test script
+ Run the recorded test and analyze the results
+Context Sensitive Recording mode
+ It is the default mode of recording which takes full advantage of Quick Test Professional's test
+object model.
+ It recognizes objects in the application regardless of their location on the screen.
+ It records the operations that are preformed in an application by identifying the GUI objects.
+Analog recording
+ records the inputs from keyboard, mouse clicks, the x and y coordinates that are travelled by
+the mouse pointer across the screen.
+ It can’t capture GUI windows and objects.
+
+Procedure:
+( I ) Recording (recording user interactions with the browser)
+ Step1:Name the project as "Demo Test".
+ Step2: Name the test case as "Demo1 test".
+ Step 3: Click on the "Start Recording" Button present on the top right corner on the IDE to
+start recording the test case.
+ Step 4: Type https://avniet.ac.in in the search box.
+ Step 5: Hit enter to go to home page
+14
+ Step 6: It will redirect you to the that webpage and what operations you perform will be recorded.
+Meanwhile, you will get the notifications of the actions performed by the IDE at the extreme
+right corner of your web browser.
+ Step 7: Now, go the IDE and click on the "Stop Recording" button to stop recording your actions
+further.
+
+(II) Playing back (executing the recorded script)
+o Click on the "Run Current Test" button present on the tool bar menu of the IDE.
+It will execute all of your interactions with the browser and gives you an overall summary of the
+executed test script.
+o Run Tests
+It allows you to run the currently selected test. When only a single test is loaded "Run Test" button
+and "Run all" button have the same effect.
+15
+
+(III ) Saving the test suite
+o Click on the save button present on the extreme right corner of the menu bar.
+o save the entire test suite as "Demo Test".
+
+
+######################################Program 2:
+
+AIM: GUI checkpoint for single property
+
+Objective: Student should be able to
+ Explain how to check the behavior of GUI objects
+ Create a test that checks GUI objects
+ Run the test on different versions of an application and examine the results
+ Graphical User Interface:
+ GUI testing evaluates design elements such as layout, colors, fonts, font sizes, labels, text
+boxes, text formatting, captions, buttons, lists, icons, links and content.
+ GUI testing processes can be either done by the two categories are manual or automatic, and
+are often performed by third -party companies, rather than developers or end users.
+ It can be require a lot of programming and is time consuming whether manual or automatic.
+ Usually the software author writes out the intended function of a menu or graphical button.
+ GUI testing also tends to test for certain program behaviors that users expect, like an
+hourglass when the program is busy.
+
+Procedure:
+ Step 1: open selenium IDE and open a new test
+ Step 2: Name the project as "Demo Test".
+ Step 3: Name the test case as "singleproperty_test".
+ Step 4: Click on the "Start Recording" Button present on the top right corner on the IDE to
+start recording the test case.
+ It will redirect you to the Google search engine page.
+ Step 5: Type "calculator.com" in the Google search box.
+ Step 6: Hit enter to get the search results.Click on the link provided under the
+URLhttps://www.calculator.com
+ Step 7: Perform certain operation for single property
+17
+ Step 8:After recording the single click then stop the recording
+ Step 9: Click on the "Run Current Test" button present on the tool bar menu of the IDE.
+It will execute all of your interactions with the browser and gives you an overall summary of the
+executed test script.
+ Step 10: give command and target to perform test and value as webpage address
+ Step 11: create GUI checkpoint for the click /enter of value to perform operation.
+ Step 12: will now check in log and reference about the GUI checkpoint and whether the test is successful or
+failure.
+
+######################################Program 3:
+
+AIM: GUI checkpoint for single object/window
+
+Objectives: Student should be able to
+ Explain how to check the behavior of GUI objects
+ Create a test that checks GUI objects/window
+ Run the test on different versions of an application and examine the results
+
+Procedure:
+ Step 1: open selenium IDE and open a new test
+ Step 2: Name the project as "Demo Test".
+ Step 3: Name the test case as "singlewindow_test".
+ Step 4: Click on the "Start Recording" Button present on the top right corner on the IDE to
+start recording the test case.
+ It will redirect you to the Google search engine page.
+ Step 5: Type "calculator.com" in the Google search box.
+ Step 6: Hit enter to get the search results Click on the link provided under the
+URLhttps://www.calculator.com
+ Step 7:Perform certain operation for window/objects
+ Step 8: After recording the single click then stop the recording
+ Step 9:Click on the "Run Current Test" button present on the tool bar menu of the IDE.
+It will execute all of your interactions with the browser and gives you an overall summary of the
+executed test script.
+ Step 10:give command and target to perform test and value as webpage address
+ Step 11: will now check in log and reference about the GUI checkpoint and whether the test is
+successful or failure and GUI checkpoint of entry of value in the checkbox of object and a
+window
+
+ #####################################Program :4
+
+AIM: GUI checkpoint for single multiple objects
+
+ Objective : Student should be able to
+ Explain how to check the behavior of GUI objects
+ Create a test that checks GUI multiple objects
+ Run the test on different versions of an application and examine the results
+
+Procedure:
+ Step 1:open selenium IDE and open a new test
+ Step 2:Name the project as "Demo Test".
+ Step 3: Name the test case as "multipleproperty_test".
+ Step 4: Click on the "Start Recording" Button present on the top right corner on the IDE to
+start recording the test case.
+ It will redirect you to the Google search engine page.
+ Step 5: Type "calculator.com" in the Google search box.
+ Step 6: Hit enter to get the search results.Click on the link provided under the
+URLhttps://www.calculator.com
+ Step 7: Perform certain operation for Multiple property
+ Step 8: After recoeding the single click then stop the recording
+ Step 9: Click on the "Run Current Test" button present on the tool bar menu of the IDE.
+It will execute all of your interactions with the browser and gives you an overall summary of the
+executed test script.
+ Step 10: Give command and target to perform test and value as webpage address
+ Step 11: if the click GUI checkpoint on multiple objects or navigating from one window to another is noted
+in reference block and in log section to check whether the test is successful or a failure.
+
+
+#####################################Program :6
+
+Database checkpoint for custom check
+
+When you create a custom check on a database, you create a standard database checkpoint in which
+you can specify which properties to check on a result set.
+You can create a custom check on a database in order to:
+● check the contents of part or the entire result set
+● edit the expected results of the contents of the result set
+● count the rows in the result set
+● count the columns in the result set
+You can create a custom check on a database using ODBC, Microsoft Query or Data Junction.
+To create a custom check on a database:
+1. Choose Insert > Database Checkpoint > Custom Check. If you are recording in Analog mode,
+press the CHECK DATABASE (CUSTOM) softkey in order to avoid extraneous mouse
+movements. Note that you can press the CHECK DATABASE (CUSTOM) softkey in Context
+Sensitive mode as well.
+2. Follow the instructions on working with the Database Checkpoint wizard, as described in
+“Working with the Database Checkpoint Wizard”
+3. If you are creating a new query, an instruction screen opens for creating a query.
+If you do not want to see this message next time you create a default database checkpoint, clear
+the Show this message next time check box.
+4. If you are using ODBC or Microsoft Query, define a query, copy a query, or specify an SQL
+statement.
+If you are using Data Junction, create a new conversion file or use an existing one.
+5. If you are using Microsoft Query and you want to be able to parameterize the SQL statement in
+the db_check statement which will be generated, then in the last wizard screen in Microsoft
+Query, click View data or edit query in Microsoft Query. Follow the instructions in
+“Parameterizing Standard Database Checkpoints”
+6. WinRunner takes several seconds to capture the database query and restore the WinRunner
+window.The Check Database dialog box opens
+
+
+###########################################Program 7
+
+
+C. Data driven test through excel test
+
+Data-driven testing (DDT) is taking a test, parameterizing it and then running that test with varying
+data. This allows you to run the same test case with many varying inputs, therefore increasing
+coverage from a single test. In addition to increasing test coverage, data driven testing allows the
+ability to build both positive and negative test cases into a single test. Data-driven testing allows you
+to test the form with a different set of input values to be sure that the application works as expected.
+It is convenient to keep data for automated tests in special storages that support sequential access to a
+set of data, for example, Excel sheets, database tables, arrays, and so on. Often data is stored either in
+a text file and are separated by commas or in Excel files and are presented as a table. If you need to
+add more data, you simply modify the file either in any text editor or in Microsoft Excel (in case of
+hard-coded values, you should modify both data and code).
+
+Data-driven test includes the following operations performed in a loop:
+• Retrieving input data from storage
+• Entering data in an application form
+• Verifying the results
+• Continuing with the next set of input
+
+data Pre-requisites:
+1. Java JDK 1.5 or above
+2. Apache POI library v3.8 or above
+3. Eclipse 3.2 above
+4. Selenium server-standalone-2.47.x.jar
+5. TestNG-6.9
+
+Data Excel
+
+Scenario -Open the application and login with different username and password. This data will be
+coming from excel sheet
+Step 1: The first and the foremost step is to create the test data with which we would be executing the
+test scripts. Download JAR files of Apache POI and Add Jars to your project library. Let us create an
+excel file and save it as “Credentials.xlsx” and place it in the created package location.
+40
+We will use the data excel file and the file looks as below
+Step 2: Create a POM class file under com.coe.pom name it as “Loginpage.java”. Inside a login page
+we write code to identify the webelements of login page using @FindBy annotation. To initialize the
+web elements we use initelements of page factory class. We utilize the elements by writing a method
+to it.
+Step 3: Create a ‘New Class‘file, by right click on the package com.coe.script and select New >
+Class and name it as “SuperClass.java”, and create a new class file with a name
+“ValidLoginLogout.java”.
+Step 4: Create some test data in excel that we will pass to script. For demo purpose I have taken
+username and password in excel.
+Step 5: Copy and paste the below mentioned code under com.coe.pom package class.
+
+
+
+##############################EXPERIMENT 8
+
+Data driven Batch
+
+When you test your application, you may want to check how it performs the same operations with
+multiple sets of data. For example, suppose you want to check how your application responds to ten
+separate sets of data. You could record ten separate tests, each with its own set of data.
+Alternatively, you could create a data-driven test with a loop that runs ten times. In each of the ten
+iterations, the test is driven by a different set of data. In order for WinRunner to use data to drive the
+test, you must substitute fixed values in the test with parameters. The parameters in the test are linked
+with data stored in a data table. You can create data-driven tests using the DataDriver wizard or by
+manually adding data-driven statements to your test scripts.
+For non-data-driven tests, the testing process is performed in three steps: creating a test; running the
+test; analyzing test results. When you create a data-driven test, you perform an extra two-part step
+between creating the test and running it: converting the test to a data-driven test and creating a
+corresponding data table.
+The following diagram outlines the stages of the data-driven testing process in WinRunner:
+
+
+#######################################EXPERIMENT 9
+
+
+Test case for calculator in windows application
+
+
+Basic Operational Tests
+Write the test cases based on the following functions and scenarios.
+● Check the calculator if it starts by on button. If it is software based calculator, then check if
+it starts via specific means like from searching for calculator in search bar and then
+executing application. Or by accessing menu item in the Windows.
+● Check if the calculator window maximizes to certain window size.
+● Check the if the calculator closes when the close button is pressed or if the exit menu is
+clicked from file > exit option.
+● Check if the help document is accessed from Help > Documentation.
+● Check if the calculator allows copy and paste functionality.
+● Check if the calculator has any specific preferences.
+● Check if all the numbers are working ( 0 to 9)
+● Check if the arithmetic keys ( +, -, *, %, /) are working.
+● Check if the clear key is working.
+● Check if the brackets keys are working.
+● Check if the sum or equal key is working.
+● Check if the square and square root key is working.
+47
+Functionality Test Cases
+● Check the addition of two integer numbers.
+● Check the addition of two negative numbers.
+● Check the addition of one positive and one negative number.
+● Check the subtraction of two integer numbers.
+● Check the subtraction of two negative numbers.
+● Check the subtraction of one negative and one positive number.
+● Check the multiplication of two integer numbers.
+● Check the multiplication of two negative numbers.
+● Check the multiplication of one negative and one positive number.
+● Check the division of two integer numbers.
+● Check the division of two negative numbers.
+● Check the division of one positive number and one integer number.
+● Check the division of a number by zero.
+● Check the division of a number by negative number.
+● Check the division of zero by any number.
+● Check if the functionality using BODMAS/BIDMAS works as expected.
