@@ -289,3 +289,67 @@ Functionality Test Cases
 ● Check the division of a number by negative number.
 ● Check the division of zero by any number.
 ● Check if the functionality using BODMAS/BIDMAS works as expected.
+
+
+
+
+
+####################################### EXPERIMENT 10
+
+ Silent mode test execution without any interruption
+
+1 Silent Mode to continue test execution without any interruption, we can use this run setting.
+1 Navigation Click Tools menu → Choose General options→ Select Run Tab → Select Run in batch mode
+(Figure III . 18 . 1 ) − Click ... NOTE In silent mode , WinRunner is not able to execute tester interactive
+statements .
+
+
+
+
+
+####################################### EXPERIMENT 11
+ Data driven test through flat files
+
+As in the Data Driven Testing guide, create a SoapUI Project from the publicly available
+CurrencyConverter WSDL (http://www.webservicex.com/CurrencyConvertor.asmx?wsdl), then add a
+TestSuite and a TestCase and open its editor:
+Now add a DataSource TestStep and select the DataSource type “Directory” from the dropdown in
+the toolbar. You should now have:
+35
+Now, select the directory where your input files are stored, add an applicable filter (e.g. “*.txt” or
+“*.xml” for text or XML files respectively), and potentially encoding.
+Now click on the icon from the screen below and enter a property that will contain the content
+of each file
+Quick tip: If your property is named “Filename” it will contain the name of the file instead of file’s
+contents.
+1. Create Test Steps
+Now you need to add a Test Request to your TestCase which you will use to test the Web Service.
+Press the SOAP Request button in the TestCase editor and select the ConversionRate operation in the
+CurrencyConverterSoap Interface.
+
+
+Press OK in all dialogs. A SOAP Request Step will be added to the TestCase and the editor for the
+request is opened. Switch to the XML editor (if not already there):
+Now, I’m operating under the assumption that you have a fully built request in each of the files in
+your directory.
+An example of an input file would be:
+
+
+<soapenv:Envelope xmlns:soapenv="
+xmlns:web=">
+<soapenv:Header/>
+<soapenv:Body>
+<web:ConversionRate>
+<web:FromCurrency>SEK</web:FromCurrency>
+<web:ToCurrency>USD</web:ToCurrency>
+</web:ConversionRate>
+</soapenv:Body>
+</soapenv:Envelope>
+
+
+So, based on that, remove all the content in the XML tab, right-click and select the path to your
+DataSource property:
+Note: If an XPATH window comes up, just click OK without selecting anything.
+Now your request should look like this:
+
+
