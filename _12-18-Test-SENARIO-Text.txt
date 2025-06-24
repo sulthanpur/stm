@@ -1,0 +1,377 @@
+## (12) Test SENARIO - 1 A login is allowing users to authorise
+
+SPECIFICATION 1:
+		 A login is allowing users to authorise this operation is taking user ID in alphanumerics from 4 to 16 char long and taking password in lower case alphabets from 4 to 8 char long.prepare test case documents.
+Test scenarios:
+Ts1: verify user ID value
+Ts2: verify password value
+Ts3: verify login operation
+Test case Document 1:
+1.Test case ID : TC_Login_nag-22nd jan 14
+2.Test case name : verify user ID value
+3.Test suite ID : Ts_login
+4.priority : Po
+5.Test setup : user id is able to fill
+6.Data matrix :
+I/P ATTRITUDE VALUE	               ECP  TYPE	     BVA (size/range)
+	   Valid	Invalid	     Min	     Max
+ User ID	a-z
+A-Z
+0-9
+	Special char
+blank fields	4 chars	16 chars
+
+Test case Document 2 :
+1.Test case ID : TC_Login_hari-22nd jan 14
+2.Test case name : verify password value
+3.Test suite ID : Ts_login
+4.priority : Po
+5.Test setup : password is able to fill
+
+6.Data matrix:
+I/P ATTRITUDE VALUE	               ECP TYPE	     BVA (SIZE/RANGE)
+	Valid	Invalid	Min	Max
+Password	a-z	A-Z
+0-9
+special char
+blank fields	4 chars	8 chars
+
+Test case document 3:
+1.Test case ID : TC_Login_hari-22nd jan 14-3
+2.Test case name : verify login operation
+3.Test suite ID : Ts_login
+4.priority : Po
+5.Test setup : registered user id and password available in hand
+
+6.Test procedure:
+STEP NO	ACTION 	REQUIRED I/P	EXPECTED O/P OR OUTCOME
+                1.	Focus to login window	none	All fields are blank
+                2.	Enter user id and password values	User id,pwd	“OK” button enabled
+                3.	Click “ok”	Valid            valid
+valid         invalid
+invalid         valid
+blank           valid
+valid           blank	Next window
+error msg
+error msg
+error msg
+error msg
+
+{-----------------------------------------------------------------------------------------------------------------------------------}
+
+## (13) Test SENARIO - 1 user ID and password to authorized
+
+SPECIFICATION 1 :
+		A login process allows user ID and password to authorized users. user ID is taking Alpha, numeric’s in lowercase from 4 to 16 characters long. The password is taking Alphabets in lowercase from 4 to 8 characters long.
+		Prepare test scenarios for login functionality.
+TEST SCENARIO 1 :
+-->Verify user ID value
+(Boundary value analysis)
+BVA(size)
+min        4           characters      pass
+max      16          characters      pass
+min-1     3          characters       fail
+max+1   5           characters        pass
+max-1   15          characters      pass
+max+1   17         characters       fail
+(Equivalence class partition)
+ECP(type)
+valid	invalid
+a-z	A-Z
+0-9	Special characters blank field
+
+
+
+
+TEST SCENARIO 2:
+-->Verify password value
+  BVA(size)
+min      4	 pass
+max     8	pass
+min-1  3	fail
+min+1 5	pass
+max-1  7	pass
+max+1 9	fail
+ECP(type)
+Valid	invalid
+a-z	A-Z
+special characters ,
+blank field
+0-9
+
+TEST SCENARIO 3:
+-->verify login operation:-
+Decision Table
+                User ID	             Password	              criteria
+                   valid
+                   valid
+                 invalid
+                  valid
+                  blank	             valid
+            invalid
+             valid
+             blank
+             value	        Next window
+        Error message
+        Error message         Error message         Error message
+
+
+{-----------------------------------------------------------------------------------------------------------------------------------}
+
+
+## (14) Test SENARIO - 2 insurance Application 
+
+SPECIFICATION 2:
+                         In an insurance Application users can apply for different types of insurance policys,when a user select TYPE A insurance,system(project) asks age of that user the age value should be greater than 16 years and should be less than 80 years.
+Prepare Test scenarios
+Test scenario 1:
+-->verify Type A policy selection
+Test scenario 2:
+-->verify focus to age when user selectType A
+Test scenario 3:
+-->verify ''Age'' value
+  BVA(Range)
+min	         17	pass
+max	         79	pass
+min-1	16	fail
+min+1	18	pass
+max-1	78	pass
+max+1	80	fail
+ECP(type)
+valid	Invalid
+0-9	a-z
+A-Z
+special char blank field
+
+{-----------------------------------------------------------------------------------------------------------------------------------}
+
+## (15) Test SENARIO - 3 E-Banking - Automatic - Door 
+
+
+SPECIFICATION 3:
+              A door opened when a person comes  infront of the door and that door closed.when that person come inside.
+Prepare Test scenarios
+Test scenario 1:
+-->verify door open
+Decision table
+Door	Person	Criteria
+opened
+opened
+closed
+closed
+	present
+absent
+absent
+present	pass
+fail
+pass
+fail
+
+Test scenario 2:
+-->verify door closed
+Door	Person	Criteria
+closed
+opened	inside
+inside	pass
+fail
+
+Test scenario 3:
+-->Verify door operation when a person is standing in the middle of the door
+
+
+SPECIFICATION 4:
+                 In a shopping application users are applying for purchase orders every purchase order is allowing user to select item no. And to enter quantity upto 10 items.This purchase order returns total amount with respect to available item price and given quantity.
+Prepare test scenarios
+Test scenario 1:
+		-->verify the selection of item no.
+Test scenario 2:
+		-->verify quality value
+BVA(Numeric)
+min	         1	pass
+max	        10	pass
+min-1	0	fail
+min+1	2	pass
+max-1	9	pass
+max+1	11	fail
+
+ECP(type)
+valid	invalid
+0-9	a-z
+A-Z
+special char
+blank fields
+
+Test scenario 3:
+		-->Verify total amount=available*given Qty
+
+
+
+
+{-----------------------------------------------------------------------------------------------------------------------------------}
+
+## (16) Test SENARIO - 4 E-Banking -App
+
+
+SPECIFICATION 5:
+                             In an E-banking application the users are connecting to bank server in this user login process,users are filling below fields
+1.Password     ------>  		6 digits number
+2.Prefix	     ------>            3 digits number but doesn't start with 0&1
+3.Suffix	     ------>                  6 digits alphanumeric
+4.Area code   ------>	          3 digits number,but it is option
+5.Command   ------>		cheque deposit,money transfer,mini     						statement,bal enquiry,bills pay
+
+Prepare test scenarios:
+Test scenario 1:
+		-->verify password
+BVA(size)
+min	6	pass
+max	6	pass
+min=max=6 digit no.	Pass
+	    =  5 digit no. Fail
+	     = 7 digits no. Fail
+ECP(type)
+valid	invalid
+0-9	a-z
+A-Z
+special char
+blank fields
+
+Test scenario 2:
+		-->verify prefix
+min=max=3 digits no.       Pass
+	       =2 digits no.       Fail
+	       =4 digits no.       Fail
+ECP(type)
+valid	invalid
+[2-9] [0-9] [0-9]	a-z,A-Z
+special characters blank field
+
+Test scenario 3:
+		-->verify suffix
+BVA(size)
+min=max=6 digits	pass
+	       =5 digits	fail
+	       =7 digits	fail
+ECP(type)
+valid	invalid
+0-9
+a-z
+A-Z	special characters
+ blank field
+
+
+
+
+Test scenario 4:
+		-->verify area code
+BVA(size)
+min=max=3 digits	pass
+	      =2 digits	fail
+	      =4 digits	fail
+
+ECP(type)
+Valid	Invalid
+0-9
+blank fields	a-z
+A-Z
+special characters
+Test scenario 5:
+		-->verify command selection like money transfer, mini statement,Bal enquiry,Bills pay
+Test scenario 6:
+		-->verify login operation to connect to bank server
+Remaining fields	Area code	Criteria
+All are valid
+All are invalid
+Anyone blank
+All are valid
+All are valid
+	Valid value
+Valid value
+Valid value
+blank field
+invalid value	Next window
+Error msg
+Error msg
+Next window
+Error window
+
+
+{-----------------------------------------------------------------------------------------------------------------------------------}
+
+## (17) Test SENARIO - 5 Shutdown 
+
+SPECIFICATION 6:
+-->sucessful computer shutdown operation
+Prepare Test scenarios
+Test scenario1:
+		verify shut down option slection through start menu
+Test scenario 2:
+		verify shutdown option selection using Alt+F4
+Test scenario 3:
+		verify shutdown operation success
+Test scenario 4:
+		verify shutdown operation when a process is in running
+Test scenario 5:
+		verify shutdown operation using run command
+Test scenario 6:  
+		Verify shutdown operation using power off
+
+{-----------------------------------------------------------------------------------------------------------------------------------}
+
+## (18) Test SENARIO - 6 Atm 
+
+SPECIFICATION 7:
+      			Money withdrawl operation in an ATM with all rules and regulations.prepare test scenarios.
+Test scenario 1:
+                        Verify ATM card insertion
+Test scenario 2:
+                        Verify operation with improper angle of card insertion
+
+Test scenario 3:
+		   Verify operation with invalid card insertion
+                           (other ATM bank card/Time expension card/scratches on card)
+Test scenario 4:
+		   Verify operation with stolen card insertion
+Test scenario 5:
+		   Verify language selection
+Test scenario 6:
+		   Verify pin no entry
+Test scenario 7:
+                         Verify operation when you entered wrong pin 3 times
+Test scenario 8:
+		   Verify A/c type selection
+Test scenario 9:
+		   Verify operation when you selected wrong A/c type(with respect to that    					inserted card)
+Test scenario 10:
+		   Verify withdraw option selection
+Test scenario 11:
+                        Verify amount entry
+Test scenario 12:
+                         Verify operation with wrong denominations
+Test scenario 13:
+		    Verify withdraw operation success
+                                 (correct amount,right  receipt and able to take cardback)
+Test scenario 14:
+                           Verify operation with withdrawl amount than possible balance
+Test scenario 15:
+                           Verify operation with withdrawl amount greater than day limit
+Test scenario 16:
+		     Verify operation with lack amount in ATM
+Test scenario 17:
+ 		     Verify cancel after inserting card
+Test scenario 18:
+		     Verify cancel after entering pin no.
+Test scenario 19:
+		     Verify cancel after language selection
+Test scenario 20:
+                           Verify cancel after A/c type selection
+Test scenario 21:
+		      Verify cancel after withdrawl selection
+Test scenario 22:
+		      Verify cancel after amount entity
+Test scenario 23:
+		  Verify operation with exceeded no.of transaction per day
+Test scenario 24:
+		     Verify operation with time delay
+
+{-----------------------------------------------------------------------------------------------------------------------------------}
